@@ -1,7 +1,7 @@
+import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,22 +17,32 @@ class MainActivity : AppCompatActivity() {
 
         homeButton.setOnClickListener {
             // Home 버튼 클릭 시 처리할 작업
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         questionButton.setOnClickListener {
             // Question 버튼 클릭 시 처리할 작업
+            val intent = Intent(this, QuestionActivity::class.java)
+            startActivity(intent)
         }
 
         reviewButton.setOnClickListener {
             // Review 버튼 클릭 시 처리할 작업
+            val intent = Intent(this, ReviewActivity::class.java)
+            startActivity(intent)
         }
 
         friendsButton.setOnClickListener {
             // Friends 버튼 클릭 시 처리할 작업
+            val intent = Intent(this, FriendsActivity::class.java)
+            startActivity(intent)
         }
 
         profileButton.setOnClickListener {
             // Profile 버튼 클릭 시 처리할 작업
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
     }
 }
